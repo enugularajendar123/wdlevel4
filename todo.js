@@ -1,5 +1,5 @@
 const todoList = () => {
-  all = [];
+  let all = [];
   const add = (todoItem) => {
     all.push(todoItem);
   };
@@ -55,7 +55,7 @@ const formattedDate = (d) => {
   return d.toISOString().split("T")[0];
 };
 
-var dateToday = new Date();
+let dateToday = new Date();
 const today = formattedDate(dateToday);
 const yesterday = formattedDate(
   new Date(new Date().setDate(dateToday.getDate() - 1))
@@ -72,8 +72,8 @@ todos.add({ title: "Pay electric bill", dueDate: tomorrow, completed: false });
 console.log("My Todo-list\n\n");
 
 console.log("Overdue");
-var overdues = todos.overdue();
-var formattedOverdues = todos.toDisplayableList(overdues);
+let overdues = todos.overdue();
+let formattedOverdues = todos.toDisplayableList(overdues);
 console.log(formattedOverdues);
 console.log("\n\n");
 
