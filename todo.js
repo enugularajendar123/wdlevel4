@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const todoList = () => {
   let all = [];
   const add = (todoItem) => {
@@ -9,27 +10,27 @@ const todoList = () => {
 
   const overdue = () => {
     // Write the date check condition here and return the array of overdue items accordingly.
-    const array = all.filter((person) => person.dueDate == yesterday);
+    let array = all.filter((person) => person.dueDate == yesterday);
     return array;
   };
 
   const dueToday = () => {
     // Write the date check condition here and return the array of todo items that are due today accordingly.
-    const array = all.filter((person) => person.dueDate === today);
+    let array = all.filter((person) => person.dueDate === today);
     return array;
   };
 
   const dueLater = () => {
     // Write the date check condition here and return the array of todo items that are due later accordingly.
-    const arr = all.filter((person) => person.dueDate === tomorrow);
+    let arr = all.filter((person) => person.dueDate === tomorrow);
 
     return arr;
   };
 
   const toDisplayableList = (list) => {
     // Format the To-Do list here, and return the output string as per the format given above.
-    arr = [];
-    const display = list.map((item) => {
+    let arr = [];
+    list.map((item) => {
       const completionStatus = item.completed ? "[x]" : "[ ]";
       const displayedDate =
         item.dueDate === new Date().toLocaleDateString("en-CA")
