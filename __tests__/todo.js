@@ -1,9 +1,10 @@
+/*eslint-disable no-undef*/
 const todoList = require("../todo");
 const { all, markAsComplete, add, overdue, dueLater, dueToday } = todoList();
 const formattedDate = (d) => {
   return d.toISOString().split("T")[0];
 };
-var dateToday = new Date();
+let dateToday = new Date();
 const today = formattedDate(dateToday);
 const yesterday = formattedDate(
   new Date(new Date().setDate(dateToday.getDate() - 1))
